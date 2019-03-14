@@ -13,8 +13,8 @@
   "keywords": [
     "BuckleScript"
   ],
-  "author": "",
-  "license": "MIT",
+  "author": "Matthew James Briggs",
+  "license": "LicenseRef-../../license.txt",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
