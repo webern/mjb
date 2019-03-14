@@ -1,0 +1,1 @@
+This Code Repository, currently located at https://github.com/webern/mjb, is Copyright (c) 2019-present by Matthew James Briggs, all rights reserved.
