@@ -28,3 +28,4 @@ VERSION="$latesttag-$branch-$revcount($shorthash)"
 echo "$VERSION"
 echo "$FILENAME"
 echo $VERSION > $FILENAME
+
