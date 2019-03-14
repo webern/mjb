@@ -1,7 +1,19 @@
+
+
 /version
 *.env
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+###########################################################################################
+# from bucklescript tool
+.DS_Store
+.merlin
+.bsb.lock
+npm-debug.log
+/lib/bs/
+/node_modules/
+
+###########################################################################################
+# from create-react-app
 
 # dependencies
 /node_modules
@@ -26,8 +38,10 @@ yarn-debug.log*
 yarn-error.log*
 
 
-# Created by https://www.gitignore.io/api/go,web,node,macos,linux,vagrant,windows,webstorm,jetbrains,reactnative,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=go,web,node,macos,linux,vagrant,windows,webstorm,jetbrains,reactnative,visualstudiocode
+###########################################################################################
+# from gitignore.io
+# Created by https://www.gitignore.io/api
+# go,web,node,macos,linux,vagrant,windows,webstorm,jetbrains,reactnative,visualstudiocode
 
 ### Go ###
 # Binaries for programs and plugins
