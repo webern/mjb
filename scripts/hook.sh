@@ -14,7 +14,7 @@ MY_GIT_HOOKS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 ## Credit:
 ##   https://gist.github.com/ThomDietrich/7127ca6e45dd4747e86ad9a609e1aeeb
 
-FILENAME="../../../version"
+FILENAME=`readlink -f "$MY_GIT_HOOKS_DIR/../../../version"`
 
 exec 1>&2
 branch=`git rev-parse --abbrev-ref HEAD`
@@ -25,4 +25,6 @@ revcount=`sed -E 's/ //g' <<<"$revcount"`
 latesttag=`git describe --tags --abbrev=0 --always`
 
 VERSION="$latesttag-$branch-$revcount($shorthash)"
+echo "$VERSION"
+echo "$FILENAME"
 echo $VERSION > $FILENAME
