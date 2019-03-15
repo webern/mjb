@@ -27,7 +27,7 @@ let make = (~message, _children) => {
     history: Array.make(1, Array.make(9, X)),
     stepNumber: 0,
     xIsNext: true,
-    message: "X is nexxt!",
+    message: "X is next!",
   },
 
   reducer: (a: action, s: state) => ReasonReact.NoUpdate,

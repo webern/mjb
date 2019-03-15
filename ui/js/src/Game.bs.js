@@ -31,7 +31,7 @@ function make(message, _children) {
                       /* history */Caml_array.caml_make_vect(1, Caml_array.caml_make_vect(9, /* X */1)),
                       /* stepNumber */0,
                       /* xIsNext */true,
-                      /* message */"X is nexxt!"
+                      /* message */"X is next!"
                     ];
             }),
           /* retainedProps */component[/* retainedProps */11],
