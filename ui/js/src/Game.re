@@ -9,6 +9,7 @@ type state = {
   history: array(squareValues),
   stepNumber: int,
   xIsNext: bool,
+  message: string,
 };
 
 type action =
@@ -26,31 +27,43 @@ let make = (~message, _children) => {
     history: Array.make(1, Array.make(9, Empty)),
     stepNumber: 0,
     xIsNext: true,
+    message: "X is next!",
   },
 
   reducer: (action, state) =>
     switch (action) {
     | Click(squareIndex) =>
-      let current = Array.copy(state.history.last);
-      current[squareIndex] = state.xIsNext ? X : O;
-      // TODO - check the last squareValues array to see if someone already one,
-      // state.history.last;
+      //   // make a copy of the last squareValues array
+      //   let current = Array.copy(state.history.last);
 
-      // or if squareIndex is already used. if either -> return from function
+      //   // TODO - check the last squareValues array to see if someone already one,
+      //   // state.history.last;
 
-      // make a copy of the last squareValues array, replaceing squareIndex
+      //   // TODO - or if squareIndex is already used. if either -> return from function
 
-      // update the box for squareIndex
+      //   // set value at squareIndex
+      //   current[squareIndex] = state.xIsNext ? X : O;
 
-      // update the message to say 'X' is next, or 'X' is winner
+      //   // update the message to say 'X' is next, or 'X' is winner
+      //   // let winnerIs = Empty;
 
-      // set xIsNext
+      //   // set xIsNext
+      //   xIsNext = !state.xIsNext;
+      //   let whoIsNextMessage = xIsNext ? "X is next!" : "O is next!";
 
-      // update the state
+      //   // update the state
 
-      // append a new squareValues to the history by
-      let step = Array.length(state.history);
-      ReasonReact.Update({...state, stepNumber: state.stepNumber + 1});
+      //   // append a new squareValues to the history by
+      //   let step = Array.length(state.history);
+      ReasonReact.Update(
+        {
+          // ...state,
+          // stepNumber: step,
+          // xIsNext,
+          // message: whoIsNextMessage,
+          state;
+        },
+      )
     },
 
   render: self =>
