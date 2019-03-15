@@ -20,6 +20,10 @@ let component = ReasonReact.reducerComponent("Game");
 // let handleClick = (i, _event, _self) =>
 //   Js.log("clicked! " ++ string_of_int(i));
 
+let handleClick = (squareIndex: int, state: state) => {
+  state;
+};
+
 let make = (~message, _children) => {
   ...component,
 
@@ -30,9 +34,10 @@ let make = (~message, _children) => {
     message: "X is next!",
   },
 
-  reducer: (action: action, s: state) =>
+  reducer: (action: action, state: state) =>
     switch (action) {
-    | Click(squareIndex) => ReasonReact.NoUpdate
+    | Click(squareIndex) =>
+      ReasonReact.Update(handleClick(squareIndex, state))
     },
 
   render: self =>
