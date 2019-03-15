@@ -3,10 +3,10 @@ type squareValue =
   | X
   | O;
 
-type squareValues = array(option(int));
+// type squareValues = array(squareValue);
 
 type state = {
-  history: array(squareValues),
+  history: array(array(squareValue)),
   stepNumber: int,
   xIsNext: bool,
   message: string,
@@ -24,47 +24,52 @@ let make = (~message, _children) => {
   ...component,
 
   initialState: () => {
-    history: Array.make(1, Array.make(9, None)),
+    history: Array.make(1, Array.make(9, X)),
     stepNumber: 0,
     xIsNext: true,
     message: "X is next!",
   },
 
-  reducer: (action, state) =>
+  reducer: (action, state) => 
     switch (action) {
-    | Click(squareIndex) =>
-      //   // make a copy of the last squareValues array
-      //   let current = Array.copy(state.history.last);
+    | Click(i) => ReasonReact.NoUpdate(),
+    };
+    // | Click(squareIndex) =>
+    //   //   // make a copy of the last squareValues array
+    //   //   let current = Array.copy(state.history.last);
 
-      //   // TODO - check the last squareValues array to see if someone already one,
-      //   // state.history.last;
+    //   //   // TODO - check the last squareValues array to see if someone already one,
+    //   //   // state.history.last;
 
-      //   // TODO - or if squareIndex is already used. if either -> return from function
+    //   //   // TODO - or if squareIndex is already used. if either -> return from function
 
-      //   // set value at squareIndex
-      //   current[squareIndex] = state.xIsNext ? X : O;
+    //   //   // set value at squareIndex
+    //   //   current[squareIndex] = state.xIsNext ? X : O;
 
-      //   // update the message to say 'X' is next, or 'X' is winner
-      //   // let winnerIs = Empty;
+    //   //   // update the message to say 'X' is next, or 'X' is winner
+    //   //   // let winnerIs = Empty;
 
-      //   // set xIsNext
-      //   xIsNext = !state.xIsNext;
-      //   let whoIsNextMessage = xIsNext ? "X is next!" : "O is next!";
+    //   //   // set xIsNext
+    //   //   xIsNext = !state.xIsNext;
+    //   //   let whoIsNextMessage = xIsNext ? "X is next!" : "O is next!";
 
-      //   // update the state
+    //   //   // update the state
 
-      //   // append a new squareValues to the history by
-      //   let step = Array.length(state.history);
-      ReasonReact.Update(
-        {
-          // ...state,
-          // stepNumber: step,
-          // xIsNext,
-          // message: whoIsNextMessage,
-          state;
-        },
-      )
+    //   //   // append a new squareValues to the history by
+    //   //   let step = Array.length(state.history);
+    //   ReasonReact.Update(
+    //     {
+    //       // ...state,
+    //       // stepNumber: step,
+    //       // xIsNext,
+    //       // message: whoIsNextMessage,
+    //       state;
+    //     },
+    //   )
     },
 
-  render: self => <div> {ReasonReact.string(message)} </div>,
+  render: self =>
+    <div onClick={_event => self.send(Click(0))}>
+      {ReasonReact.string(message)}
+    </div>,
 };
