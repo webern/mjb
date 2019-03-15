@@ -30,43 +30,7 @@ let make = (~message, _children) => {
     message: "X is next!",
   },
 
-  reducer: (action, state) => 
-    switch (action) {
-    | Click(i) => ReasonReact.NoUpdate(),
-    };
-    // | Click(squareIndex) =>
-    //   //   // make a copy of the last squareValues array
-    //   //   let current = Array.copy(state.history.last);
-
-    //   //   // TODO - check the last squareValues array to see if someone already one,
-    //   //   // state.history.last;
-
-    //   //   // TODO - or if squareIndex is already used. if either -> return from function
-
-    //   //   // set value at squareIndex
-    //   //   current[squareIndex] = state.xIsNext ? X : O;
-
-    //   //   // update the message to say 'X' is next, or 'X' is winner
-    //   //   // let winnerIs = Empty;
-
-    //   //   // set xIsNext
-    //   //   xIsNext = !state.xIsNext;
-    //   //   let whoIsNextMessage = xIsNext ? "X is next!" : "O is next!";
-
-    //   //   // update the state
-
-    //   //   // append a new squareValues to the history by
-    //   //   let step = Array.length(state.history);
-    //   ReasonReact.Update(
-    //     {
-    //       // ...state,
-    //       // stepNumber: step,
-    //       // xIsNext,
-    //       // message: whoIsNextMessage,
-    //       state;
-    //     },
-    //   )
-    },
+  reducer: (a: action, s: state) => ReasonReact.NoUpdate,
 
   render: self =>
     <div onClick={_event => self.send(Click(0))}>
