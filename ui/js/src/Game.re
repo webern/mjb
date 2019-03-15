@@ -3,7 +3,7 @@ type squareValue =
   | X
   | O;
 
-type squareValues = array(squareValue);
+type squareValues = array(option(int));
 
 type state = {
   history: array(squareValues),
@@ -24,7 +24,7 @@ let make = (~message, _children) => {
   ...component,
 
   initialState: () => {
-    history: Array.make(1, Array.make(9, Empty)),
+    history: Array.make(1, Array.make(9, None)),
     stepNumber: 0,
     xIsNext: true,
     message: "X is next!",
@@ -66,8 +66,5 @@ let make = (~message, _children) => {
       )
     },
 
-  render: self =>
-    <div onClick={self.send(Click(0))}>
-      {ReasonReact.string(message)}
-    </div>,
+  render: self => <div> {ReasonReact.string(message)} </div>,
 };
