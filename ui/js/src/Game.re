@@ -30,8 +30,8 @@ let make = (~message, _children) => {
     message: "X is next!",
   },
 
-  reducer: (a: action, s: state) =>
-    switch (a) {
+  reducer: (action: action, s: state) =>
+    switch (action) {
     | Click(squareIndex) => ReasonReact.NoUpdate
     },
 

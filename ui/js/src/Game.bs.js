@@ -35,7 +35,7 @@ function make(message, _children) {
                     ];
             }),
           /* retainedProps */component[/* retainedProps */11],
-          /* reducer */(function (a, s) {
+          /* reducer */(function (action, s) {
               return /* NoUpdate */0;
             }),
           /* jsElementWrapped */component[/* jsElementWrapped */13]
