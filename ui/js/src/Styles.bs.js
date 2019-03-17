@@ -44,11 +44,28 @@ function actionButton(disabled) {
             ]);
 }
 
+var ol = Css.style(/* :: */[
+      Css.unsafe("padding-left", "30px"),
+      /* [] */0
+    ]);
+
+var ul = Css.style(/* :: */[
+      Css.unsafe("padding-left", "30px"),
+      /* [] */0
+    ]);
+
 var Styles = /* module */[
   /* card */card,
   /* title */title,
-  /* actionButton */actionButton
+  /* actionButton */actionButton,
+  /* ol */ol,
+  /* ul */ul
 ];
+
+Css.$$global("body", /* :: */[
+      Css.fontSize(Css.px(14)),
+      /* [] */0
+    ]);
 
 exports.Styles = Styles;
 /* card Not a pure module */
