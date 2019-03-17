@@ -3,6 +3,7 @@
 
 var $$Array = require("bs-platform/lib/js/array.js");
 var Block = require("bs-platform/lib/js/block.js");
+var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Caml_array = require("bs-platform/lib/js/caml_array.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
@@ -22,18 +23,18 @@ function createMessage(xIsNext) {
   }
 }
 
-function sdfgsdgsdfg(i, $$event, self) {
-  return /* () */0;
+function doTheWholeClickyThing(inMyself, inIndex, inUnit) {
+  return Curry._1(inMyself[/* send */3], /* Click */[inIndex]);
 }
 
-function handleClick(squareIndex, state) {
-  var currentBoard = Caml_array.caml_array_get(state[/* history */0], state[/* history */0].length - 1 | 0);
-  var match = state[/* xIsNext */2];
-  Caml_array.caml_array_set(currentBoard, squareIndex, match ? /* X */1 : /* O */2);
+function handleClick(inIndex, inState) {
+  var currentBoard = Caml_array.caml_array_get(inState[/* history */0], inState[/* history */0].length - 1 | 0);
+  var match = inState[/* xIsNext */2];
+  Caml_array.caml_array_set(currentBoard, inIndex, match ? /* X */1 : /* O */2);
   var currentBoardArr = /* array */[currentBoard];
-  var newHistory = $$Array.append(state[/* history */0], currentBoardArr);
-  var newStepNumber = state[/* stepNumber */1] + 1 | 0;
-  var newXIsNext = !state[/* xIsNext */2];
+  var newHistory = $$Array.append(inState[/* history */0], currentBoardArr);
+  var newStepNumber = inState[/* stepNumber */1] + 1 | 0;
+  var newXIsNext = !inState[/* xIsNext */2];
   var newMessage = newXIsNext ? "X is next" : "O is next";
   return /* record */[
           /* history */newHistory,
@@ -57,7 +58,9 @@ function make(message, _children) {
           /* render */(function (self) {
               return React.createElement("div", {
                           className: "xxx"
-                        }, ReasonReact.element(undefined, undefined, Board$ReactTemplate.make(Caml_array.caml_make_vect(9, /* Empty */0), sdfgsdgsdfg, /* array */[])));
+                        }, ReasonReact.element(undefined, undefined, Board$ReactTemplate.make(Caml_array.caml_make_vect(9, /* Empty */0), (function (param, param$1) {
+                                    return Curry._1(self[/* send */3], /* Click */[param]);
+                                  }), /* array */[])));
             }),
           /* initialState */(function (param) {
               return /* record */[
@@ -78,7 +81,7 @@ function make(message, _children) {
 exports.component = component;
 exports.calculateWinner = calculateWinner;
 exports.createMessage = createMessage;
-exports.sdfgsdgsdfg = sdfgsdgsdfg;
+exports.doTheWholeClickyThing = doTheWholeClickyThing;
 exports.handleClick = handleClick;
 exports.make = make;
 /* component Not a pure module */

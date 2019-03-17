@@ -12,7 +12,7 @@ function handleClick(_event, _self) {
   return /* () */0;
 }
 
-function theDummyOnClick(theRealFunction, $$event, self) {
+function theDummyOnClick(theRealFunction, $$event) {
   Curry._1(theRealFunction, /* () */0);
   return /* () */0;
 }
@@ -43,7 +43,10 @@ function make(clickHandler, xo, _children) {
                 
               }
               return React.createElement("div", {
-                          onClick: clickHandler
+                          onClick: (function (param) {
+                              Curry._1(clickHandler, /* () */0);
+                              return /* () */0;
+                            })
                         }, tmp);
             }),
           /* initialState */component[/* initialState */10],

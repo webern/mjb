@@ -22,8 +22,11 @@ let createMessage = (xIsNext: bool) => {
 // let sdfgsdgsdfg = (theGameComponent, i, event, unusedSelf) => {
 //   theGameComponent.handle(self.reducer(Click));
 // };
+let doTheWholeClickyThing = (~inMyself, ~inIndex: int, ~inUnit: unit) => {
+  inMyself.ReasonReact.send(Click(inIndex));
+};
 
-let handleClick = (~inIndex: int, ~inState: state, ~inUnit: unit) => {
+let handleClick = (~inIndex: int, ~inState: state) => {
   let currentBoard = inState.history[Array.length(inState.history) - 1];
   currentBoard[inIndex] = inState.xIsNext ? X : O;
   let currentBoardArr = [|currentBoard|];
@@ -81,7 +84,7 @@ let make = (~message, _children) => {
     <div className="xxx">
       <Board
         squares={Array.make(9, Types.Empty)}
-        clickHandler={handleClick(~inState=self.state)}
+        clickHandler={doTheWholeClickyThing(~inMyself=self)}
       />
     </div>,
 };
