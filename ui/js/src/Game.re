@@ -1,12 +1,5 @@
-type squareValue =
-  | Empty
-  | X
-  | O;
-
-// type squareValues = array(squareValue);
-
 type state = {
-  history: array(array(squareValue)),
+  history: array(array(Types.squareValue)),
   stepNumber: int,
   xIsNext: bool,
   message: string,
@@ -17,13 +10,17 @@ type action =
 
 let component = ReasonReact.reducerComponent("Game");
 
-let calculateWinner = (currentBoard: array(squareValue)) => {
-  X;
-   // TODO - implement
+let calculateWinner = currentBoard => {
+  Types.X;
+        // TODO - implement
 };
 
 let createMessage = (xIsNext: bool) => {
   xIsNext ? "X is next" : "O is next";
+};
+
+let sdfgsdgsdfg = (i, event, self) => {
+  ();
 };
 
 let handleClick = (squareIndex: int, state: state) => {
@@ -68,7 +65,7 @@ let make = (~message, _children) => {
   ...component,
 
   initialState: () => {
-    history: Array.make(1, Array.make(9, X)),
+    history: Array.make(1, Array.make(9, Types.Empty)),
     stepNumber: 0,
     xIsNext: true,
     message: "X is next!",
@@ -81,7 +78,7 @@ let make = (~message, _children) => {
     },
 
   render: self =>
-    <div onClick={_event => self.send(Click(0))}>
-      {ReasonReact.string(message)}
+    <div className="xxx">
+      <Board squares={Array.make(9, Types.Empty)} clickHandler=sdfgsdgsdfg />
     </div>,
 };

@@ -3,10 +3,10 @@
 
 var $$Array = require("bs-platform/lib/js/array.js");
 var Block = require("bs-platform/lib/js/block.js");
-var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Caml_array = require("bs-platform/lib/js/caml_array.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var Board$ReactTemplate = require("./Board.bs.js");
 
 var component = ReasonReact.reducerComponent("Game");
 
@@ -20,6 +20,10 @@ function createMessage(xIsNext) {
   } else {
     return "O is next";
   }
+}
+
+function sdfgsdgsdfg(i, $$event, self) {
+  return /* () */0;
 }
 
 function handleClick(squareIndex, state) {
@@ -52,14 +56,12 @@ function make(message, _children) {
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function (self) {
               return React.createElement("div", {
-                          onClick: (function (_event) {
-                              return Curry._1(self[/* send */3], /* Click */[0]);
-                            })
-                        }, message);
+                          className: "xxx"
+                        }, ReasonReact.element(undefined, undefined, Board$ReactTemplate.make(Caml_array.caml_make_vect(9, /* Empty */0), sdfgsdgsdfg, /* array */[])));
             }),
           /* initialState */(function (param) {
               return /* record */[
-                      /* history */Caml_array.caml_make_vect(1, Caml_array.caml_make_vect(9, /* X */1)),
+                      /* history */Caml_array.caml_make_vect(1, Caml_array.caml_make_vect(9, /* Empty */0)),
                       /* stepNumber */0,
                       /* xIsNext */true,
                       /* message */"X is next!"
@@ -76,6 +78,7 @@ function make(message, _children) {
 exports.component = component;
 exports.calculateWinner = calculateWinner;
 exports.createMessage = createMessage;
+exports.sdfgsdgsdfg = sdfgsdgsdfg;
 exports.handleClick = handleClick;
 exports.make = make;
 /* component Not a pure module */
