@@ -41,7 +41,7 @@ function make(message, _children) {
             }),
           /* retainedProps */component[/* retainedProps */11],
           /* reducer */(function (action, state) {
-              return /* Update */Block.__(0, [state]);
+              return /* Update */Block.__(0, [handleClick(action[0], state)]);
             }),
           /* jsElementWrapped */component[/* jsElementWrapped */13]
         ];

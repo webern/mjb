@@ -21,8 +21,32 @@ let component = ReasonReact.reducerComponent("Game");
 //   Js.log("clicked! " ++ string_of_int(i));
 
 let handleClick = (squareIndex: int, state: state) => {
+  let currentBoard = state.history[Array.length(state.history)-1]
+
   state;
 };
+
+/* react version
+
+     handleClick(i) {
+       const history = this.state.history.slice(0, this.state.stepNumber + 1);
+       const current = history[history.length - 1];
+       const squares = current.squares.slice();
+       if (calculateWinner(squares) || squares[i]) {
+         return;
+       }
+       squares[i] = this.state.xIsNext ? "X" : "O";
+       this.setState({
+         history: history.concat([
+           {
+             squares: squares
+           }
+         ]),
+         stepNumber: history.length,
+         xIsNext: !this.state.xIsNext
+       });
+     }
+   */
 
 let make = (~message, _children) => {
   ...component,
