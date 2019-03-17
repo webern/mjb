@@ -17,13 +17,32 @@ type action =
 
 let component = ReasonReact.reducerComponent("Game");
 
+let calculateWinner = (squareIndex: int, currentBoard: array(squareValue)) => {
+  X;
+   // TODO - implement
+};
+
+let createMessage = (xIsNext: bool) => {
+  xIsNext ? "X is next" : "O is next";
+};
+
 // let handleClick = (i, _event, _self) =>
 //   Js.log("clicked! " ++ string_of_int(i));
 
 let handleClick = (squareIndex: int, state: state) => {
-  let currentBoard = state.history[Array.length(state.history)-1]
-
-  state;
+  let currentBoard = state.history[Array.length(state.history) - 1];
+  currentBoard[squareIndex] = state.xIsNext ? X : O;
+  let currentBoardArr = [|currentBoard|];
+  let newHistory = Array.append(state.history, currentBoardArr);
+  let newStepNumber = state.stepNumber + 1;
+  let newXIsNext = !state.xIsNext;
+  let newMessage = createMessage(newXIsNext);
+  {
+    history: newHistory,
+    stepNumber: newStepNumber,
+    xIsNext: newXIsNext,
+    message: newMessage,
+  };
 };
 
 /* react version
