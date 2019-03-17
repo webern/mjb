@@ -81,7 +81,7 @@ let make = (~message, _children) => {
     },
 
   render: self =>
-    <div className="xxx">
+    <div className=Styles.card>
       <Board
         squares={Array.make(9, Types.Empty)}
         clickHandler={doTheWholeClickyThing(~inMyself=self)}
