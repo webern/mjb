@@ -2,7 +2,10 @@ let component = ReasonReact.statelessComponent("Component1");
 //let handleClick = (_event, _self) => Js.log("clicked!");
 
 let renderSquare = (i: int, squares, clickHandler) => {
-  <Square xo={Array.get(squares, i)} onClick={clickHandler(i)} />;
+  <Square
+    xo={Array.get(squares, i)}
+    clickHandler={clickHandler(~inIndex=i)}
+  />;
 };
 
 let make = (~squares, ~clickHandler, _children) => {

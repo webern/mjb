@@ -12,7 +12,12 @@ function handleClick(_event, _self) {
   return /* () */0;
 }
 
-function make(onClick, xo, _children) {
+function theDummyOnClick(theRealFunction, $$event, self) {
+  Curry._1(theRealFunction, /* () */0);
+  return /* () */0;
+}
+
+function make(clickHandler, xo, _children) {
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -38,7 +43,7 @@ function make(onClick, xo, _children) {
                 
               }
               return React.createElement("div", {
-                          onClick: Curry._1(self[/* handle */0], onClick)
+                          onClick: clickHandler
                         }, tmp);
             }),
           /* initialState */component[/* initialState */10],
@@ -50,5 +55,6 @@ function make(onClick, xo, _children) {
 
 exports.component = component;
 exports.handleClick = handleClick;
+exports.theDummyOnClick = theDummyOnClick;
 exports.make = make;
 /* component Not a pure module */

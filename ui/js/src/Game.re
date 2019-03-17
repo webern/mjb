@@ -19,17 +19,17 @@ let createMessage = (xIsNext: bool) => {
   xIsNext ? "X is next" : "O is next";
 };
 
-let sdfgsdgsdfg = (i, event, self) => {
-  ();
-};
+// let sdfgsdgsdfg = (theGameComponent, i, event, unusedSelf) => {
+//   theGameComponent.handle(self.reducer(Click));
+// };
 
-let handleClick = (squareIndex: int, state: state) => {
-  let currentBoard = state.history[Array.length(state.history) - 1];
-  currentBoard[squareIndex] = state.xIsNext ? X : O;
+let handleClick = (~inIndex: int, ~inState: state, ~inUnit: unit) => {
+  let currentBoard = inState.history[Array.length(inState.history) - 1];
+  currentBoard[inIndex] = inState.xIsNext ? X : O;
   let currentBoardArr = [|currentBoard|];
-  let newHistory = Array.append(state.history, currentBoardArr);
-  let newStepNumber = state.stepNumber + 1;
-  let newXIsNext = !state.xIsNext;
+  let newHistory = Array.append(inState.history, currentBoardArr);
+  let newStepNumber = inState.stepNumber + 1;
+  let newXIsNext = !inState.xIsNext;
   let newMessage = createMessage(newXIsNext);
   {
     history: newHistory,
@@ -79,6 +79,9 @@ let make = (~message, _children) => {
 
   render: self =>
     <div className="xxx">
-      <Board squares={Array.make(9, Types.Empty)} clickHandler=sdfgsdgsdfg />
+      <Board
+        squares={Array.make(9, Types.Empty)}
+        clickHandler={handleClick(~inState=self.state)}
+      />
     </div>,
 };
