@@ -10,7 +10,7 @@ var ReasonReact = require("reason-react/src/ReasonReact.js");
 
 var component = ReasonReact.reducerComponent("Game");
 
-function calculateWinner(squareIndex, currentBoard) {
+function calculateWinner(currentBoard) {
   return /* X */1;
 }
 

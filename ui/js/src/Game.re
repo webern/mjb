@@ -17,7 +17,7 @@ type action =
 
 let component = ReasonReact.reducerComponent("Game");
 
-let calculateWinner = (squareIndex: int, currentBoard: array(squareValue)) => {
+let calculateWinner = (currentBoard: array(squareValue)) => {
   X;
    // TODO - implement
 };
@@ -25,9 +25,6 @@ let calculateWinner = (squareIndex: int, currentBoard: array(squareValue)) => {
 let createMessage = (xIsNext: bool) => {
   xIsNext ? "X is next" : "O is next";
 };
-
-// let handleClick = (i, _event, _self) =>
-//   Js.log("clicked! " ++ string_of_int(i));
 
 let handleClick = (squareIndex: int, state: state) => {
   let currentBoard = state.history[Array.length(state.history) - 1];
