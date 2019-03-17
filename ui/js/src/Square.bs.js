@@ -43,11 +43,13 @@ function make(clickHandler, xo, _children) {
                 
               }
               return React.createElement("div", {
-                          onClick: (function (param) {
-                              Curry._1(clickHandler, /* () */0);
-                              return /* () */0;
-                            })
-                        }, tmp);
+                          className: "game-square"
+                        }, React.createElement("button", {
+                              onClick: (function (param) {
+                                  Curry._1(clickHandler, /* () */0);
+                                  return /* () */0;
+                                })
+                            }, tmp));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],

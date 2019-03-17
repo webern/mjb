@@ -1,4 +1,4 @@
-let component = ReasonReact.statelessComponent("Component1");
+let component = ReasonReact.statelessComponent("Board");
 //let handleClick = (_event, _self) => Js.log("clicked!");
 
 let renderSquare = (i: int, squares, clickHandler) => {

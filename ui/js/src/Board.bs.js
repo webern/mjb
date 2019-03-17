@@ -7,7 +7,7 @@ var Caml_array = require("bs-platform/lib/js/caml_array.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Square$ReactTemplate = require("./Square.bs.js");
 
-var component = ReasonReact.statelessComponent("Component1");
+var component = ReasonReact.statelessComponent("Board");
 
 function renderSquare(i, squares, clickHandler) {
   return ReasonReact.element(undefined, undefined, Square$ReactTemplate.make(Curry._1(clickHandler, i), Caml_array.caml_array_get(squares, i), /* array */[]));
