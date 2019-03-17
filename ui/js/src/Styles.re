@@ -34,7 +34,7 @@ module Styles = {
   let ul = style([unsafe("padding-left", "30px")]);
 };
 
-Css.global("body", [Css.fontSize(Css.px(14))]);
+// Css.global("body", [Css.fontSize(Css.px(14)), Css.Emotion.]);
 
 /*
  // body {

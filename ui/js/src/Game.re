@@ -1,3 +1,5 @@
+[%raw {|require('./Styles.css')|}];
+
 type state = {
   history: array(array(Types.squareValue)),
   stepNumber: int,
@@ -19,9 +21,6 @@ let createMessage = (xIsNext: bool) => {
   xIsNext ? "X is next" : "O is next";
 };
 
-// let sdfgsdgsdfg = (theGameComponent, i, event, unusedSelf) => {
-//   theGameComponent.handle(self.reducer(Click));
-// };
 let doTheWholeClickyThing = (~inMyself, ~inIndex: int, ~inUnit: unit) => {
   inMyself.ReasonReact.send(Click(inIndex));
 };
@@ -81,7 +80,7 @@ let make = (~message, _children) => {
     },
 
   render: self =>
-    <div className=Styles.Styles.card>
+    <div className="game">
       <Board
         squares={Array.make(9, Types.Empty)}
         clickHandler={doTheWholeClickyThing(~inMyself=self)}
