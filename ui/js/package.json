@@ -16,7 +16,6 @@
   "author": "Matthew James Briggs",
   "license": "LicenseRef-../../license.txt",
   "dependencies": {
-    "bs-css": "^8.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "reason-react": ">=0.4.0"
