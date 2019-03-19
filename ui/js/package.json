@@ -1,31 +1,28 @@
 {
   "name": "mjb",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack -w",
-    "webpack:production": "NODE_ENV=production webpack",
-    "server": "webpack-dev-server"
+    "old:build": "bsb -make-world",
+    "old:start": "bsb -make-world -w",
+    "old:clean": "bsb -clean-world",
+    "old:test": "echo \"Error: no test specified\" && exit 1",
+    "old:webpack": "webpack -w",
+    "old:webpack:production": "NODE_ENV=production webpack",
+    "old:server": "webpack-dev-server",
+    "build": "parcel build ./src/index.html",
+    "dev": "parcel ./src/index.html ./src/*.re"
   },
-  "keywords": [
-    "BuckleScript"
-  ],
+  "keywords": [],
   "author": "Matthew James Briggs",
-  "license": "LicenseRef-../../license.txt",
+  "license": "LicenseRef-../../../license.txt",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "reason-react": ">=0.4.0"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "reason-react": "^0.5.3"
   },
   "devDependencies": {
-    "bs-platform": "^4.0.18",
-    "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.8"
+    "bs-platform": "^4.0.5",
+    "bsb-js": "^1.1.7",
+    "parcel-bundler": "^1.12.2"
   }
 }

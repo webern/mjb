@@ -24,7 +24,7 @@ function make(squares, clickHandler, _children) {
           /* willUnmount */component[/* willUnmount */6],
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
-          /* render */(function (self) {
+          /* render */(function (_self) {
               return React.createElement("div", undefined, React.createElement("div", {
                               className: "board-row"
                             }, renderSquare(0, squares, clickHandler), renderSquare(1, squares, clickHandler), renderSquare(2, squares, clickHandler)), React.createElement("div", {

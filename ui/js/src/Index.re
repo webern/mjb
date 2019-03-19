@@ -1,6 +1,3 @@
-//[%raw {|require('./Styles.css')|}];
+[%raw {|require('./Styles.css')|}];
 
-ReactDOMRe.renderToElementWithId(
-  <Game message="Hello! Click this text." />,
-  "root",
-);
+ReactDOMRe.renderToElementWithId(<Game />, "root");

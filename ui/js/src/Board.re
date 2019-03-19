@@ -10,7 +10,7 @@ let renderSquare = (i: int, squares, clickHandler) => {
 
 let make = (~squares, ~clickHandler, _children) => {
   ...component,
-  render: self =>
+  render: _self =>
     <div>
       <div className="board-row">
         {renderSquare(0, squares, clickHandler)}

@@ -10,7 +10,7 @@ type action =
 
 let component = ReasonReact.reducerComponent("Game");
 
-let calculateWinner = currentBoard => {
+let calculateWinner = _currentBoard => {
   Types.X;
         // TODO - implement
 };
@@ -61,7 +61,7 @@ let handleClick = (~inIndex: int, ~inState: state) => {
      }
    */
 
-let make = (~message, _children) => {
+let make = _children => {
   ...component,
 
   initialState: () => {
@@ -79,9 +79,12 @@ let make = (~message, _children) => {
 
   render: self =>
     <div className="game">
-      <Board
-        squares={Array.make(9, Types.Empty)}
-        clickHandler={doTheWholeClickyThing(~inMyself=self)}
-      />
+      <div className="game-board">
+        <Board
+          squares={Array.make(9, Types.Empty)}
+          clickHandler={doTheWholeClickyThing(~inMyself=self)}
+        />
+      </div>
+      <div className="game-info" />
     </div>,
 };

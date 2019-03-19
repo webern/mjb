@@ -11,7 +11,7 @@ var Board$ReactTemplate = require("./Board.bs.js");
 
 var component = ReasonReact.reducerComponent("Game");
 
-function calculateWinner(currentBoard) {
+function calculateWinner(_currentBoard) {
   return /* X */1;
 }
 
@@ -44,7 +44,7 @@ function handleClick(inIndex, inState) {
         ];
 }
 
-function make(message, _children) {
+function make(_children) {
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -58,9 +58,13 @@ function make(message, _children) {
           /* render */(function (self) {
               return React.createElement("div", {
                           className: "game"
-                        }, ReasonReact.element(undefined, undefined, Board$ReactTemplate.make(Caml_array.caml_make_vect(9, /* Empty */0), (function (param, param$1) {
-                                    return Curry._1(self[/* send */3], /* Click */[param]);
-                                  }), /* array */[])));
+                        }, React.createElement("div", {
+                              className: "game-board"
+                            }, ReasonReact.element(undefined, undefined, Board$ReactTemplate.make(Caml_array.caml_make_vect(9, /* Empty */0), (function (param, param$1) {
+                                        return Curry._1(self[/* send */3], /* Click */[param]);
+                                      }), /* array */[]))), React.createElement("div", {
+                              className: "game-info"
+                            }));
             }),
           /* initialState */(function (param) {
               return /* record */[
