@@ -8,9 +8,6 @@ var React = require("react");
 var Caml_array = require("bs-platform/lib/js/caml_array.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Board$ReactTemplate = require("./Board.bs.js");
-var Styles$ReactTemplate = require("./Styles.bs.js");
-
-((require('./Styles.css')));
 
 var component = ReasonReact.reducerComponent("Game");
 
@@ -60,8 +57,7 @@ function make(message, _children) {
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function (self) {
               return React.createElement("div", {
-                          className: "game",
-                          style: Styles$ReactTemplate.fontGlobal(/* () */0)
+                          className: "game"
                         }, ReasonReact.element(undefined, undefined, Board$ReactTemplate.make(Caml_array.caml_make_vect(9, /* Empty */0), (function (param, param$1) {
                                     return Curry._1(self[/* send */3], /* Click */[param]);
                                   }), /* array */[])));
@@ -88,4 +84,4 @@ exports.createMessage = createMessage;
 exports.doTheWholeClickyThing = doTheWholeClickyThing;
 exports.handleClick = handleClick;
 exports.make = make;
-/*  Not a pure module */
+/* component Not a pure module */
