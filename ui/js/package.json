@@ -7,7 +7,9 @@
     "watch": "bsb -make-world -w",
     "test": "jest",
     "webpack": "webpack",
-    "webpack-dev": "webpack-dev-server"
+    "webpack-dev": "webpack-dev-server",
+    "parcel:build": "parcel build ./src/index.html",
+    "parcel:dev": "parcel ./src/index.html ./src/*.re"
   },
   "keywords": [
     "BuckleScript"
@@ -15,7 +17,9 @@
   "license": "MIT",
   "devDependencies": {
     "bs-jest": "^0.1.0",
-    "bs-platform": "^2.0"
+    "bs-platform": "^2.0",
+    "bsb-js": "^1.1.7",
+    "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
     "bs-axios": "0.0.16",
@@ -23,8 +27,6 @@
     "bs-fetch": "0.1.1",
     "bs-json": "0.2.1",
     "express": "4.15.4",
-    "reason-react": "0.2.4",
-    "webpack": "3.5.6",
-    "webpack-dev-server": "2.7.1"
+    "reason-react": "0.2.4"
   }
 }
