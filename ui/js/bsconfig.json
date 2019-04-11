@@ -1,14 +1,14 @@
-// This is the configuration file used by BuckleScript's build system bsb. Its documentation lives here: http://bucklescript.github.io/bucklescript/docson/#build-schema.json
-// BuckleScript comes with its own parser for bsconfig.json, which is normal JSON, with the extra support of comments and trailing commas.
 {
   "name": "realworld-reasonml",
-  "version": "0.1.0",
+  "reason": {
+    "react-jsx": 2
+  },
   "sources": [
     "src",
     "__tests__"
   ],
+  "suffix": ".bs.js",
   "bs-dependencies" : [
-      // add your dependencies here. You'd usually install them normally through `npm install my-dependency`. If my-dependency has a bsconfig.json too, then everything will work seamlessly.
       "bs-jest",
       "reason-react",
       "bs-director",
@@ -17,8 +17,5 @@
       "bs-axios"
   ],
   "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
-  "reason": {
-    "react-jsx": 2
-  },
   "refmt": 3
 }

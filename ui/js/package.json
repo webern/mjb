@@ -8,7 +8,7 @@
     "test": "jest",
     "webpack": "webpack",
     "webpack-dev": "webpack-dev-server",
-    "parcel:build": "parcel build ./src/index.html",
+    "parcel:build": "parcel build ./src/index.html ./src/*.re",
     "parcel:dev": "parcel ./src/index.html ./src/*.re"
   },
   "keywords": [
