@@ -1,43 +1,43 @@
-type state = {
-  history: array(array(Types.squareValue)),
-  stepNumber: int,
-  xIsNext: bool,
-  message: string,
-};
+// type state = {
+//   history: array(array(Types.squareValue)),
+//   stepNumber: int,
+//   xIsNext: bool,
+//   message: string,
+// };
 
-type action =
-  | Click(int);
+// type action =
+//   | Click(int);
 
-let component = ReasonReact.reducerComponent("Game");
+let component = ReasonReact.reducerComponent("Auth");
 
-let calculateWinner = _currentBoard => {
-  Types.X;
-        // TODO - implement
-};
+// let calculateWinner = _currentBoard => {
+//   Types.X;
+//         // TODO - implement
+// };
 
-let createMessage = (xIsNext: bool) => {
-  xIsNext ? "X is next" : "O is next";
-};
+// let createMessage = (xIsNext: bool) => {
+//   xIsNext ? "X is next" : "O is next";
+// };
 
-let doTheWholeClickyThing = (~inMyself, ~inIndex: int, ~inUnit: unit) => {
-  inMyself.ReasonReact.send(Click(inIndex));
-};
+// let doTheWholeClickyThing = (~inMyself, ~inIndex: int, ~inUnit: unit) => {
+//   inMyself.ReasonReact.send(Click(inIndex));
+// };
 
-let handleClick = (~inIndex: int, ~inState: state) => {
-  let currentBoard = inState.history[Array.length(inState.history) - 1];
-  currentBoard[inIndex] = inState.xIsNext ? X : O;
-  let currentBoardArr = [|currentBoard|];
-  let newHistory = Array.append(inState.history, currentBoardArr);
-  let newStepNumber = inState.stepNumber + 1;
-  let newXIsNext = !inState.xIsNext;
-  let newMessage = createMessage(newXIsNext);
-  {
-    history: newHistory,
-    stepNumber: newStepNumber,
-    xIsNext: newXIsNext,
-    message: newMessage,
-  };
-};
+// let handleClick = (~inIndex: int, ~inState: state) => {
+//   let currentBoard = inState.history[Array.length(inState.history) - 1];
+//   currentBoard[inIndex] = inState.xIsNext ? X : O;
+//   let currentBoardArr = [|currentBoard|];
+//   let newHistory = Array.append(inState.history, currentBoardArr);
+//   let newStepNumber = inState.stepNumber + 1;
+//   let newXIsNext = !inState.xIsNext;
+//   let newMessage = createMessage(newXIsNext);
+//   {
+//     history: newHistory,
+//     stepNumber: newStepNumber,
+//     xIsNext: newXIsNext,
+//     message: newMessage,
+//   };
+// };
 
 /* react version
 
@@ -64,27 +64,18 @@ let handleClick = (~inIndex: int, ~inState: state) => {
 let make = _children => {
   ...component,
 
-  initialState: () => {
-    history: Array.make(1, Array.make(9, Types.Empty)),
-    stepNumber: 0,
-    xIsNext: true,
-    message: "X is next!",
-  },
+  // initialState: () => {
+  //   history: Array.make(1, Array.make(9, Types.Empty)),
+  //   stepNumber: 0,
+  //   xIsNext: true,
+  //   message: "X is next!",
+  // },
 
-  reducer: (action: action, state: state) =>
-    switch (action) {
-    | Click(squareIndex) =>
-      ReasonReact.Update(handleClick(squareIndex, state))
-    },
+  // reducer: (action: action, state: state) =>
+  //   switch (action) {
+  //   | Click(squareIndex) =>
+  //     ReasonReact.Update(handleClick(squareIndex, state))
+  //   },
 
-  render: self =>
-    <div className="game">
-      <div className="game-board">
-        <Board
-          squares={Array.make(9, Types.Empty)}
-          clickHandler={doTheWholeClickyThing(~inMyself=self)}
-        />
-      </div>
-      <div className="game-info" />
-    </div>,
+  render: self => <div className="class-auth"> Yello Bisshop </div>,
 };
