@@ -501,21 +501,24 @@ browserify-zlib@^0.1.4:
   dependencies:
     pako "~0.2.0"
 
-bs-axios@^0.0.16:
+bs-axios@0.0.16:
   version "0.0.16"
   resolved "https://registry.yarnpkg.com/bs-axios/-/bs-axios-0.0.16.tgz#e7390435d998a03eb9f02b4edeb994b4fd2511ea"
+  integrity sha512-BahXAAXnQYZsWM1QUhlkiXQCjxep1Z/bMXcMU5IT/yM62K8JERIYl0wudy/77ew+etqXcjaw1P6phk4wVUYcDw==
   dependencies:
     axios "^0.16.1"
 
-bs-director@^0.0.4:
+bs-director@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/bs-director/-/bs-director-0.0.4.tgz#49b21297127429405335ab6ff8b4a606ed4886e5"
+  integrity sha1-SbISlxJ0KUBTNatv+LSmBu1IhuU=
   dependencies:
     director "^1.2.8"
 
-bs-fetch@^0.1.1:
+bs-fetch@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/bs-fetch/-/bs-fetch-0.1.1.tgz#1bee13786813eeee697c48959c008bc08ed8210a"
+  integrity sha1-G+4TeGgT7u5pfEiVnACLwI7YIQo=
 
 bs-jest@^0.1.0:
   version "0.1.0"
@@ -523,9 +526,10 @@ bs-jest@^0.1.0:
   dependencies:
     jest "^19.0.2"
 
-bs-json@^0.2.1:
+bs-json@0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/bs-json/-/bs-json-0.2.1.tgz#b30bd33405a1694cd1cd78e927d10cfa93b80a0a"
+  integrity sha512-Hr3ZM9VtfN0X/yO5fgQh628YUnirzVhcTBLWJPOJiTULnAvgsc0nFaDrvW7+FMcZMKRQvzQpbu64m/6emkvF1Q==
 
 bs-platform@^2.0:
   version "2.0.0"
@@ -1192,9 +1196,10 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express@^4.13.3, express@^4.15.4:
+express@4.15.4, express@^4.13.3:
   version "4.15.4"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.4.tgz#032e2253489cf8fce02666beca3d11ed7a2daed1"
+  integrity sha1-Ay4iU0ic+PzgJma+yj0R7XotrtE=
   dependencies:
     accepts "~1.3.3"
     array-flatten "1.1.1"
@@ -3001,9 +3006,10 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-reason-react@^0.2.4:
+reason-react@0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.2.4.tgz#96d85a533fc93e695818dbb3e6a8ae05fbf0de7d"
+  integrity sha512-u9ETR/OQX4/a2NrTtJweS9wm867f82iQxvEytGfmu06SuwiYYAMSGvUMZZSzIwQMWc9f4pUuPnkyRFpkDFPaKA==
   dependencies:
     react ">=15.0.0"
     react-dom ">=15.0.0"
@@ -3698,9 +3704,10 @@ webpack-dev-middleware@^1.11.0:
     range-parser "^1.0.3"
     time-stamp "^2.0.0"
 
-webpack-dev-server@^2.7.1:
+webpack-dev-server@2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.7.1.tgz#21580f5a08cd065c71144cf6f61c345bca59a8b8"
+  integrity sha1-IVgPWgjNBlxxFEz29hw0W8pZqLg=
   dependencies:
     ansi-html "0.0.7"
     bonjour "^3.5.0"
@@ -3733,9 +3740,10 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.5.6:
+webpack@3.5.6:
   version "3.5.6"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.5.6.tgz#a492fb6c1ed7f573816f90e00c8fbb5a20cc5c36"
+  integrity sha512-sXnxfx6KoZVrFAGLjdhCCwDtDwkYMfwm8mJjkQv3thr5pjTlbxopVlr/kJwc9Bz317gL+gNjvz++ir9TgG1MDg==
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
