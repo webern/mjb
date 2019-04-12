@@ -2,9 +2,11 @@
   "name": "mjb",
   "version": "0.1.0",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "build": "bsb -clean-world && bsb -make-world && NODE_ENV=production parcel build index.html",
+    "build:bsb": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "dev": "parcel index.html",
+    "start": "bsb -make-world -w"
   },
   "keywords": [
     "BuckleScript"

@@ -1,6 +1,10 @@
 # Basic Reason Template
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+Some notes on how this works.
+
+Use the vscode plugin named [`reason-vscode`](https://github.com/jaredly/reason-language-server) by Jared Forsyth.
+
+The language server launched by `reason-vscode` does the compiling. `bsb -make-world` `bsb -make-world -w` are generally not needed because the vscode plugin's language server is doing this when we save `.re` files
 
 # Build
 ```
