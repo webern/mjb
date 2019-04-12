@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: matthewjamesbriggs/circleci-node-stretch-lfs:v001
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - cache-{{ checksum ".circleci/cache-lock" }}-{{ checksum "ui/js/yarn.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - cache-
+
+      - run:
+          name: Yarn Install
+          command: cd ui/js && yarn install --cache-folder ~/yarn-cache
+
+      - save_cache:
+          keys:
+          - cache-{{ checksum ".circleci/cache-lock" }}-{{ checksum "ui/js/yarn.lock" }}
+          paths:
+            - ui/js/node_modules
+            - ~/yarn-cache
+          key: cache-{{ checksum ".circleci/cache-lock" }}-{{ checksum "ui/js/yarn.lock" }}
+
+      - run:
+          name: Build UI
+          command: cd ui/js && yarn build
