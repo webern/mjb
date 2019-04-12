@@ -12,3 +12,7 @@ Parcel is unaware of ReasonML in the current setup. `bsb` (running from `vscode`
 ## How Testing Works
 
 TODO - figure how testing works
+
+## Real World Example
+
+Learn [this](https://github.com/jihchi/reason-react-realworld-example-app)
