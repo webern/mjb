@@ -1,16 +1,18 @@
-# ![RealWorld Example App](logo.png)
+# Basic Reason Template
 
-> ### RealWorld ReasonML/React frontend codebase that uses the [RealWorld](https://github.com/gothinkster/realworld-example-apps) API.
+Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
 
-# Installation
+# Build
+```
+npm run build
+```
 
-* Install ReasonML [ReasonML](https://reasonml.github.io/) 
-* Clone this project
-* Run npm install to install dependencies
+# Build + Watch
 
-# Getting started
+```
+npm run start
+```
 
-> Prerequisites: 
-* See installation section.
-* To compile to javascript run the following command in the terminal: npm run watch. This will watch your files and compile to js when they change
-* To start webpack run the following command: npm run webpack-dev. This will create a local webserver to serve the application
+
+# Editor
+If you use `vscode`, Press `Windows + Shift + B` it will build automatically
