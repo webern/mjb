@@ -1,23 +1,29 @@
 {
   "name": "react-template",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "__tests__",
+      "subdirs": true
+    }
+  ],
+  "bs-dependencies": [
+    "bs-jest",
+    "reason-react",
+    "bs-director",
+    "bs-fetch",
+    "bs-json",
+    "bs-axios"
+  ],
+  "bsc-flags": [
+    "-bs-no-version-header",
+    "-bs-super-errors"
+  ],
   "reason": {
     "react-jsx": 2
   },
-  "sources": {
-    "dir" : "src",
-    "subdirs" : true
-  },
-  "package-specs": [{
-    "module": "commonjs",
-    "in-source": true
-  }],
-  "suffix": ".bs.js",
-  "namespace": true,
-  "bs-dependencies": [
-    "reason-react"
-  ],
-  "refmt": 3,
-    "warnings": {
-    "error": "+5"
-  }
+  "refmt": 3
 }

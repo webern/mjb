@@ -2,26 +2,30 @@
   "name": "mjb",
   "version": "0.0.0",
   "scripts": {
-    "old:build": "bsb -make-world",
-    "old:start": "bsb -make-world -w",
-    "old:clean": "bsb -clean-world",
-    "old:test": "echo \"Error: no test specified\" && exit 1",
-    "old:webpack": "webpack -w",
-    "old:webpack:production": "NODE_ENV=production webpack",
-    "old:server": "webpack-dev-server",
-    "build": "parcel build ./src/index.html",
-    "dev": "parcel ./src/index.html ./src/*.re"
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "parcel:build": "parcel build ./src/index.html",
+    "parcel:dev": "parcel ./src/index.html ./src/*.re",
+    "test": "jest",
+    "watch": "bsb -make-world -w",
+    "webpack": "webpack",
+    "webpack-dev": "webpack-dev-server"
   },
   "keywords": [],
-  "author": "Matthew James Briggs",
-  "license": "LicenseRef-../../../license.txt",
+  "license": "MIT",
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "reason-react": "^0.5.3"
+    "bs-axios": "^0.0.16",
+    "bs-director": "^0.0.4",
+    "bs-fetch": "^0.1.1",
+    "bs-json": "^0.2.1",
+    "express": "^4.15.4",
+    "reason-react": "^0.2.4",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
   },
   "devDependencies": {
-    "bs-platform": "^4.0.5",
+    "bs-jest": "^0.1.0",
+    "bs-platform": "^2.0",
     "bsb-js": "^1.1.7",
     "parcel-bundler": "^1.12.2"
   }
