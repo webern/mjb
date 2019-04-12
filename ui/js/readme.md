@@ -1,22 +1,14 @@
-# Basic Reason Template
+Very Basic Reason React Setup
+=============================
 
-Some notes on how this works.
+## How it Works
 
 Use the vscode plugin named [`reason-vscode`](https://github.com/jaredly/reason-language-server) by Jared Forsyth.
 
 The language server launched by `reason-vscode` does the compiling. `bsb -make-world` `bsb -make-world -w` are generally not needed because the vscode plugin's language server is doing this when we save `.re` files
 
-# Build
-```
-npm run build
-```
+Parcel is unaware of ReasonML in the current setup. `bsb` (running from `vscode`) takes care of compiling down to JavaScript, then Parcel takes it from there. Parcel is watching the `.bs.js` files through the imports that lead up to `index.html`. When `bsb` detects changes to `.re` files, hot compiles, then Parcel detects the changes in the `.bs.js` files and hot packages them with a reload in the server. (Parcel is providing the dev server)
 
-# Build + Watch
+## How Testing Works
 
-```
-npm run start
-```
-
-
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+TODO - figure how testing works
