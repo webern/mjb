@@ -1,0 +1,9 @@
+yarn add bs-fetch
+yarn add bs-webapi
+yarn add re-formality
+yarn add react-scripts
+yarn add remotedata-re
+yarn add -D @glennsl/bs-jest
+yarn add -D bs-react-testing-library
+yarn add -D concurrently
+yarn add -D jest-fetch-mock

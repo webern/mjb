@@ -14,15 +14,27 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@glennsl/bs-json": "^3.0.0",
+    "bs-fetch": "^0.3.1",
+    "bs-webapi": "^0.13.6",
+    "re-formality": "^2.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "reason-react": "^0.6.0"
+    "react-scripts": "^2.1.8",
+    "reason-react": "^0.6.0",
+    "remotedata-re": "^0.2.1"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.8",
-    "@glennsl/bs-json": "^3.0.0",
     "bs-platform": "^5.0.2",
+    "bs-react-testing-library": "^0.4.0",
+    "concurrently": "^4.1.0",
     "jest": "^24.7.1",
-    "parcel-bundler": "^1.12.3"
+    "jest-fetch-mock": "^2.1.2",
+    "lint-staged": "^8.1.5",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.17.0",
+    "react-app-rewired": "^2.1.1",
+    "react-hot-loader": "^4.8.3"
   }
 }

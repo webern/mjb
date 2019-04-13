@@ -16,3 +16,22 @@ TODO - figure how testing works
 ## Real World Example
 
 Learn [this](https://github.com/jihchi/reason-react-realworld-example-app)
+
+## Build Notes
+
+The build is currently working locally with
+Node v10.5.3, using nvm
+
+```
+which node
+/Users/mjb/.nvm/versions/node/v10.15.3/bin/node
+```
+
+These are the global installs:
+
+```
+npm list --global --depth=0
+/Users/mjb/.nvm/versions/node/v10.15.3/lib
+├── npm@6.4.1
+└── yarn@1.13.0
+```

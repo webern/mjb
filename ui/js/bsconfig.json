@@ -1,14 +1,29 @@
 {
   "name": "mjb",
   "version": "0.1.0",
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": [
+        {
+          "dir": "__tests__",
+          "type": "dev"
+        }
+      ]
+    }
+  ],
   "bs-dependencies": [
+    "@glennsl/bs-json",
+    "bs-fetch",
+    "bs-webapi",
+    "re-formality",
     "reason-react",
+    "remotedata-re"
+  ],
+  "bs-dev-dependencies": [
     "@glennsl/bs-jest",
-    "@glennsl/bs-json"
+    "bs-dom-testing-library",
+    "bs-react-testing-library"
   ],
   "reason": {
     "react-jsx": 2
