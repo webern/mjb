@@ -4,7 +4,7 @@
   "scripts": {
     "build": "bsb -clean-world && bsb -make-world && NODE_ENV=production parcel build index.html",
     "build:bsb": "bsb -make-world",
-    "clean": "bsb -clean-world",
+    "clean": "rm -rf node_modules && yarn && bsb -clean-world",
     "dev": "parcel index.html",
     "start": "bsb -make-world -w"
   },
@@ -13,13 +13,16 @@
   ],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "bs-platform": "^5.0.2",
-    "parcel-bundler": "^1.12.3"
-  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "reason-react": "^0.6.0"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.8",
+    "@glennsl/bs-json": "^3.0.0",
+    "bs-platform": "^5.0.2",
+    "jest": "^24.7.1",
+    "parcel-bundler": "^1.12.3"
   }
 }
