@@ -2,9 +2,9 @@
 'use strict';
 
 var React = require("react");
-var App$Mjb = require("./App.bs.js");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
+var App$ReactHooksTemplate = require("./App.bs.js");
 
-ReactDOMRe.renderToElementWithId(React.createElement(App$Mjb.make, { }), "root");
+ReactDOMRe.renderToElementWithId(React.createElement(App$ReactHooksTemplate.make, { }), "app-entry-point");
 
 /*  Not a pure module */

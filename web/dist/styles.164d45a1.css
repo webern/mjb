@@ -1,0 +1,25 @@
+* {
+  background: white;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+  background: #38AECC;
+}
+
+.leftcol {
+  background: #D7E8D4;
+  flex: 1;
+}
+
+.rightcol {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+}
+
+/*# sourceMappingURL=/styles.164d45a1.css.map */

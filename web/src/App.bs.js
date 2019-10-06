@@ -2,24 +2,9 @@
 'use strict';
 
 var React = require("react");
-var LeftSide$ReactHooksTemplate = require("./LeftSide.bs.js");
-var Component1$ReactHooksTemplate = require("./Component1.bs.js");
-var Component2$ReactHooksTemplate = require("./Component2.bs.js");
 
 function App(Props) {
-  return React.createElement("div", undefined, React.createElement(LeftSide$ReactHooksTemplate.make, { }), React.createElement("div", {
-                  className: "col-2"
-                }, React.createElement("div", {
-                      className: "header"
-                    }, "Header"), React.createElement("div", {
-                      className: "main content"
-                    }, React.createElement("div", {
-                          className: "article"
-                        }, React.createElement(Component1$ReactHooksTemplate.make, {
-                              message: "Hi"
-                            }), React.createElement(Component2$ReactHooksTemplate.make, {
-                              greeting: "Greeting"
-                            })))));
+  return React.createElement("div", undefined, "Hello Reason React");
 }
 
 var make = App;

@@ -1,1 +1,1 @@
-ReactDOMRe.renderToElementWithId(<App/>, "app-entry-point");
+ReactDOMRe.renderToElementWithId(<App />, "root");
