@@ -23,7 +23,7 @@ let body = style([
 
 let col1 = style([
 	  background(hex("#D7E8D4")),
-	  flex(1.),
+	  // flex(1.),
 	]);
 
 // .col-1 {

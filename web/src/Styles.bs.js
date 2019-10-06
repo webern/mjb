@@ -24,10 +24,7 @@ var body = Css.style(/* :: */[
 
 var col1 = Css.style(/* :: */[
       Css.background(Css.hex("#D7E8D4")),
-      /* :: */[
-        Css.flex(Css.auto),
-        /* [] */0
-      ]
+      /* [] */0
     ]);
 
 exports.body = body;
