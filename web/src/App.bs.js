@@ -4,7 +4,13 @@
 var React = require("react");
 
 function App(Props) {
-  return React.createElement("div", undefined, "Hello Reason React");
+  return React.createElement("div", {
+              className: "root"
+            }, React.createElement("div", {
+                  className: "leftcol"
+                }, "Let Column"), React.createElement("div", {
+                  className: "maincol"
+                }, "Main Column"));
 }
 
 var make = App;

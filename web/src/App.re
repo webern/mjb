@@ -1,6 +1,7 @@
 [@react.component]
 let make = () => {
-  <div class="root">
-    {ReasonReact.string("Hello Reason React")}
-  </div>
- };
+  <div className="root">
+    <div className="leftcol"> {ReasonReact.string("Let Column")} </div>
+    <div className="maincol"> {ReasonReact.string("Main Column")} </div>
+  </div>;
+};

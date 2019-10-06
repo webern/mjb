@@ -2614,7 +2614,13 @@ if ("development" === 'production') {
 var React = require("react");
 
 function App(Props) {
-  return React.createElement("div", undefined, "Hello Reason React");
+  return React.createElement("div", {
+    className: "root"
+  }, React.createElement("div", {
+    className: "leftcol"
+  }, "Let Column"), React.createElement("div", {
+    className: "maincol"
+  }, "Main Column"));
 }
 
 var make = App;
@@ -32233,7 +32239,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60472" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50879" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
