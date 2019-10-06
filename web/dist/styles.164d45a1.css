@@ -1,0 +1,56 @@
+* {
+  background: white;
+  box-sizing: border-box;
+}
+
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.menubar {
+  margin: 10px;
+  background: #ECC30B;
+}
+
+.belowmenu {
+  display: flex;
+  margin: 10px;
+  background: #046E8F;
+}
+
+.leftbar {
+  margin: 10px;
+  flex: 1;
+  background: #022F40;
+}
+
+.mainviewport {
+  flex: 5;
+  margin: 10px;
+  background: #38AECC;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+  background: #38AECC;
+}
+
+.leftcol {
+  background: #D7E8D4;
+  flex: 1;
+}
+
+.maincol {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+}
+
+/*# sourceMappingURL=/styles.164d45a1.css.map */

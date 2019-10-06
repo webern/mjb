@@ -1,0 +1,66 @@
+$color-darkest: #183446;
+$color-dark: #022F40;
+$color-medium: #046E8F;
+$color-light: #0090C1;
+$color-lightest: #38AECC;
+
+$color-contrast: #ECC30B;
+$color-deep-other: #4C2B36;
+
+$theme-background: white;
+
+* {
+	background: $theme-background;
+	box-sizing: border-box;
+}
+
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.menubar {
+  margin: 10px;
+  background: $color-contrast;
+}
+
+.belowmenu {
+  display: flex;
+  margin: 10px;
+  background: $color-medium;
+}
+
+.leftbar {
+  margin: 10px;
+  flex: 1;
+  background: $color-dark;
+}
+
+.mainviewport {
+  flex: 5;
+  margin: 10px;
+  background: $color-lightest;
+}
+
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+  background: #38AECC;
+}
+
+.leftcol {
+  background: #D7E8D4;
+  flex: 1;
+}
+
+.maincol {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+}

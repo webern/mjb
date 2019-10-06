@@ -3,17 +3,17 @@
 
 var React = require("react");
 
-function App(Props) {
+function StandardPage(Props) {
   return React.createElement("div", {
-              className: "root"
+              id: "flksjdf"
             }, React.createElement("div", {
                   className: "leftcol"
-                }, "Let Column"), React.createElement("div", {
+                }), React.createElement("div", {
                   className: "maincol"
-                }, "Main Column"));
+                }));
 }
 
-var make = App;
+var make = StandardPage;
 
 exports.make = make;
 /* react Not a pure module */
